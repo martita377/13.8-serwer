@@ -12,7 +12,7 @@ server.on('request', function(request, response) {
         });
     } else {
         response.statusCode = 404;
-        response.setHeader('Content-Type', 'image/jpg', 'utf-8');
+        response.setHeader('Content-Type', 'image/jpeg');
         fs.readFile('./error.jpg', function(err, data) {
             if (err) throw err;
             response.write(data);
